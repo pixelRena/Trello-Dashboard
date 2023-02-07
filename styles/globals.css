@@ -44,4 +44,4 @@ a {
   text-decoration: none;
 }
 
-.defaultBackground { background: linear-gradient(134.07deg, rgba(108, 102, 174, 0.55) 23.13%, rgba(196, 73, 158, 0.55) 122.17%); }
+.bg-primary-color { background: linear-gradient(134.07deg, rgba(108, 102, 174, 0.55) 23.13%, rgba(196, 73, 158, 0.55) 122.17%); }

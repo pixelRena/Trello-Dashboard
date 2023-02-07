@@ -6,8 +6,8 @@ import PlaceholderAvatar from '../../test/placeholder_avatar.jpg';
 export default function UserDropdown() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     return(
-        <div className={`relative rounded-2xl ${dropdownOpen ? "defaultBackground" : ""}`}>
-            <button className={`${dropdownOpen ? "" : "defaultBackground"} rounded-2xl p-2 w-full`} type="button" onClick={() => setDropdownOpen(!dropdownOpen)}>
+        <div className={`relative rounded-2xl ${dropdownOpen ? "bg-primary-color" : ""}`}>
+            <button className={`${dropdownOpen ? "" : "bg-primary-color"} rounded-2xl p-2 w-full`} type="button" onClick={() => setDropdownOpen(!dropdownOpen)}>
                 <div className="h-full inline align-middle mr-2">
                     <div className="w-[35px] h-[35px] shadow-[0_0_4px_1px_rgba(0,0,0,0.4)] rounded-full bg-cover inline-block bg-center h-screen bg-no-repeat" style={{"backgroundImage": `url(${PlaceholderAvatar.src})`}}></div>
                 </div>
