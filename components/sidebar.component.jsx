@@ -9,11 +9,11 @@ export default function Sidebar() {
 
     return(
     <>
-    <button className="fixed text-black bottom-0 rounded-md bg-white w-full p-3 lg:hidden" 
+    <button className="fixed z-[2] text-black bottom-0 rounded-md bg-white w-full p-3 lg:hidden" 
     onClick={() => setMenuOpen(!menuOpen)}>
         MENU
     </button>
-    <aside className={`bg-primary-color lg:flex overflow-x-hidden flex-col lg:w-56 w-full h-screen px-4 py-8 overflow-y-auto ${menuOpen ? "" : "hidden"}`}>
+    <aside className={`z-[1] bg-primary-color lg:flex absolute lg:relative overflow-x-hidden flex-col lg:w-56 w-full h-screen px-4 py-8 overflow-y-auto ${menuOpen ? "" : "hidden"}`}>
         <div className="text-center m-auto">
             <span className="font-bold lg:text-xl text-2xl">Trellometrics</span>
             <img className="m-auto mt-5" src="/favicon.svg" alt="favicon"/>

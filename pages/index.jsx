@@ -19,7 +19,7 @@ export default function Home() {
           <Sidebar/>
         </section>
 
-        <section className="mt-5 ml-12 mr-12 w-screen">
+        <section className="mt-5 ml-2 mr-2 lg:ml-12 lg:mr-12 w-screen">
           <Navigation/>
           {/* Routes begin here */}
         </section>
