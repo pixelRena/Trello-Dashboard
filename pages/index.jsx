@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css';
 import Background from "@/components/background.component";
 import Sidebar from "@/components/sidebar.component";
+import Navigation from "@/components/navigation/navigation.component";
 
 export default function Home() {
   return (
@@ -14,7 +15,14 @@ export default function Home() {
       </Head>
       <Background/>
       <main className={styles.main}>
-        <Sidebar/>
+        <section> 
+          <Sidebar/>
+        </section>
+
+        <section className="mt-5 ml-12 mr-12 w-screen">
+          <Navigation/>
+          {/* Routes begin here */}
+        </section>
       </main>
     </>
   )

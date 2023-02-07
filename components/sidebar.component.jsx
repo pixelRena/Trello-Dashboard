@@ -13,7 +13,7 @@ export default function Sidebar() {
     onClick={() => setMenuOpen(!menuOpen)}>
         MENU
     </button>
-    <aside className={`lg:flex overflow-x-hidden flex-col lg:w-56 w-full h-screen px-4 py-8 overflow-y-auto ${menuOpen ? "" : "hidden"}`}>
+    <aside className={`defaultBackground lg:flex overflow-x-hidden flex-col lg:w-56 w-full h-screen px-4 py-8 overflow-y-auto ${menuOpen ? "" : "hidden"}`}>
         <div className="text-center m-auto">
             <span className="font-bold lg:text-xl text-2xl">Trellometrics</span>
             <img className="m-auto mt-5" src="/favicon.svg" alt="favicon"/>
@@ -47,17 +47,6 @@ export default function Sidebar() {
                 <span className="mx-4">Support</span>
             </Link>
         </div>
-
-        <style jsx>
-        {
-            `
-            aside {
-                background: linear-gradient(134.07deg, rgba(108, 102, 174, 0.55) 23.13%, rgba(196, 73, 158, 0.55) 122.17%);
-            }
-            `
-        }
-        </style>
-
     </aside>
     </>
     )

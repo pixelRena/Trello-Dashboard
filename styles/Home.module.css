@@ -1,4 +1,6 @@
 .main {
     position: relative;
+    display: flex;
+    flex-direction: flex-column;
     z-index: 1;
 }

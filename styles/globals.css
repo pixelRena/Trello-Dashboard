@@ -5,6 +5,7 @@
 
 * {
   box-sizing: border-box;
+  outline: 0;
 }
 
 ::-webkit-scrollbar {
@@ -42,3 +43,5 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.defaultBackground { background: linear-gradient(134.07deg, rgba(108, 102, 174, 0.55) 23.13%, rgba(196, 73, 158, 0.55) 122.17%); }
