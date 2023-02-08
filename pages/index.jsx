@@ -1,8 +1,4 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css';
-import Background from "@/components/background.component";
-import Sidebar from "@/components/sidebar.component";
-import Navigation from "@/components/navigation/navigation.component";
+import Head from 'next/head';
 
 export default function Home() {
   return (
@@ -13,17 +9,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Background/>
-      <main className={styles.main}>
-        <section> 
-          <Sidebar/>
-        </section>
-
-        <section className="mt-5 ml-2 mr-2 lg:ml-12 lg:mr-12 w-screen">
-          <Navigation/>
-          {/* Routes begin here */}
-        </section>
-      </main>
     </>
   )
 }

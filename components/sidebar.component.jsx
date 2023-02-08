@@ -21,7 +21,7 @@ export default function Sidebar() {
 
         <div className="flex flex-col lg:justify-between text-2xl lg:text-base justify-start flex-1 mt-6 m-auto">
             <nav>
-                <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md mb-3" href="#dashboard" onClick={() => setMenuOpen(false)}>
+                <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md mb-3" href="/dashboard" onClick={() => setMenuOpen(false)}>
                     <SlOptionsVertical size={22}/>
                     <span className="mx-4">Dashboard</span>
                 </Link>
