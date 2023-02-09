@@ -2,8 +2,10 @@ import CardTemplate from "@/components/card-template/card-template.component";
 import PageSubNavigation from "@/components/page-template/page-subnavigation.component";
 import Button from "@/components/buttons/button.component";
 import ProgressBar from "@/components/progressbar/progressbar.component";
-import { SlQuestion } from "react-icons/sl";
 import DashboardRecentActivity from "@/components/dashboard-items/dashboard-recent-activity.component";
+import { options } from "@/utils/chart-bar-options.utils";
+import { CanvasJSChart } from "canvasjs-react-charts";
+import { SlQuestion } from "react-icons/sl";
 
 // To be removed
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
@@ -62,11 +64,11 @@ export default function Dashboard () {
                 </CardTemplate>
             </div>
             <div className="relative flex flex-row pt-3 pb-3 gap-2">
-                <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Recent Activity">
+                <CardTemplate additionalClasses="text-sm 2xl:text-lg w-fit" title="Recent Activity">
                     <DashboardRecentActivity/>
                 </CardTemplate>
-                <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Active Members">
-                Graph activity
+                <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Active Members (5 members)">
+                    <CanvasJSChart options={options} containerProps={{ width: '100%', height: '300px' }} />
                 </CardTemplate>
             </div>
 
