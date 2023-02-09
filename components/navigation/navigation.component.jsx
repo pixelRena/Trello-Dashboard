@@ -4,12 +4,12 @@ import Notifications from "./notifications.component";
 
 export default function Navigation() {
     return(
-        <div className="flex flex-row justify-between"> 
+        <nav className="flex flex-row justify-between"> 
             <SearchBar/>
-            <div className="flex flex-row">  
+            <ul className="flex flex-row">  
                 <Notifications/>
                 <UserDropdown/>
-            </div>
-        </div>
+            </ul>
+        </nav>
     );
 }
