@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
         <section>
           <Sidebar/>
         </section>
-        <section className="mt-5 ml-2 mr-2 lg:ml-12 lg:mr-12 w-screen">
+        <section className="mt-5 ml-2 mr-2 lg:mr-5 lg:ml-5 w-screen">
           <Navigation/>
           <Component {...pageProps} />
         </section>

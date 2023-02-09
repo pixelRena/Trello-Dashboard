@@ -43,7 +43,7 @@ export default function Dashboard () {
     }
 
     return(
-        <div className="h-[90vh] overflow-y-auto overflow-visible">
+        <div className="h-[90vh] overflow-y-auto overflow-visible p-5">
             <PageSubNavigation title="Overview"/>
             <div className="relative flex flex-row pt-3 pb-3 gap-2 ">
                 <CardTemplate additionalClasses="text-sm 2xl:text-lg" additionalContentClasses="flex flex-col justify-between" title="Description">
