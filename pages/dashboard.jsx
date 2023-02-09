@@ -3,8 +3,7 @@ import PageSubNavigation from "@/components/page-template/page-subnavigation.com
 import Button from "@/components/buttons/button.component";
 import ProgressBar from "@/components/progressbar/progressbar.component";
 import DashboardRecentActivity from "@/components/dashboard-items/dashboard-recent-activity.component";
-import { options } from "@/utils/chart-bar-options.utils";
-import { CanvasJSChart } from "canvasjs-react-charts";
+// import { CanvasJSChart } from "canvasjs-react-charts";
 import { SlQuestion } from "react-icons/sl";
 
 // To be removed
@@ -12,22 +11,58 @@ import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 
 export default function Dashboard () {
+
+
+    const options = {
+        title: {
+          text: ""
+        },
+        backgroundColor: "transparent",
+        axisX: {
+            labelFontColor: "#fff",
+            lineColor: "#fff",
+        },
+        axisY: {
+            labelFontColor: "#fff",
+            lineColor: "#fff",
+            gridColor: "#fff",
+            maximum: 5,
+        },
+        data: [{				
+                  type: "column",
+                  dataPoints: [
+                      { label: "Sun",  y: 2  },
+                      { label: "Mon", y: 1  },
+                      { label: "Tues", y: 2  },
+                      { label: "Weds",  y: 5  },
+                      { label: "Thurs",  y: 2  },
+                      { label: "Fri",  y: 0  },
+                      { label: "Sat",  y: 1  }
+                  ]
+         }]
+    }
+
     return(
-        <>
+        <div className="h-[90vh] overflow-y-auto overflow-visible">
             <PageSubNavigation title="Overview"/>
-            <div className="relative flex flex-row pt-3 pb-3 gap-2">
-                <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Description">
-                Trellometrics is the key to quick and seamless
-                viewing and analyzing the data for your boards
-                on trello.
-                <br/><br/>
-                #BetterWorkflow
+            <div className="relative flex flex-row pt-3 pb-3 gap-2 ">
+                <CardTemplate additionalClasses="text-sm 2xl:text-lg" additionalContentClasses="flex flex-col justify-between" title="Description">
+                <div>
+                    Trellometrics is the key to quick and seamless
+                    viewing and analyzing the data for your boards
+                    on trello.
+                </div>
+                <div>#BetterWorkflow</div>
                 </CardTemplate>
-                <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Cards (20)" additionalContentClasses={"justify-around flex flex-col"}>
-                    <div>Completed <span className="float-right">13</span></div>
-                    <ProgressBar max={25} value={15} type="good"/>
-                    <div>Remaining <span className="float-right">7</span></div>
-                    <ProgressBar max={100} value={15}/>
+                <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Cards (20)" additionalContentClasses="justify-around flex flex-col">
+                    <div>
+                        <div className="pb-2">Completed <span className="float-right">13</span></div>
+                        <ProgressBar max={25} value={15} type="good"/>
+                    </div>
+                    <div>
+                        <div className="pb-2">Remaining <span className="float-right">7</span></div>
+                        <ProgressBar max={100} value={15}/>
+                    </div>
                     <div className="self-end">
                         <Button>View Cards</Button>
                     </div>
@@ -68,10 +103,10 @@ export default function Dashboard () {
                     <DashboardRecentActivity/>
                 </CardTemplate>
                 <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Active Members (5 members)">
-                    <CanvasJSChart options={options} containerProps={{ width: '100%', height: '300px' }} />
+                    {/* <CanvasJSChart options={options} containerProps={{ width: '100%', height: '300px' }} /> */}
                 </CardTemplate>
             </div>
 
-        </>
+        </div>
     );
 }
