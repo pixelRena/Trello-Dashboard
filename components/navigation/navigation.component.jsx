@@ -1,6 +1,6 @@
-import SearchBar from "./searchbar.component";
-import UserDropdown from "./user-dropdown.component";
-import Notifications from "./notifications.component";
+import SearchBar from "../searchbar/searchbar.component";
+import UserDropdown from "../user-dropdown/user-dropdown.component";
+import Notifications from "../notifications/notifications.component";
 
 export default function Navigation() {
     return(
