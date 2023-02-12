@@ -9,9 +9,9 @@ export default function isBoardOpen() {
     const boardName = "Trellometrics.com";
     
     return(
-        <div className="relative font-extralight w-full">
-            <div className={`absolute rounded-2xl ${isBoardOpen && "bg-primary-color-full"}`}>
-                <button className={`pt-1 pr-2 pl-2 text-l border-b-[1px] border-transparent ${!isBoardOpen &&  "hover:border-white"}`} onClick={() => setIsBoardOpen(!isBoardOpen)}>Current Board: {boardName} <BiChevronDown className="inline" size={25}/></button>
+        <div className="relative font-extralight w-full mt-2 text-center">
+            <div className={`absolute rounded-2xl lg:w-fit w-full ${isBoardOpen && "bg-primary-color-full"}`}>
+                <button className={`pt-1 pr-2 pl-2 text-l border-b-[1px] border-transparent ${!isBoardOpen &&  "lg:hover:border-white"}`} onClick={() => setIsBoardOpen(!isBoardOpen)}>Current Board: {boardName} <BiChevronDown className="inline" size={25}/></button>
                 <div className={`relative board-dropdown pt-1 pb-1 ${!isBoardOpen && "hidden"}`}>
                     <div className="pr-2 pl-2 font-medium">Select a board:</div>
                     <BoardItems/>

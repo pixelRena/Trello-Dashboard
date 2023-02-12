@@ -4,7 +4,7 @@ import DashboardCards from "@/components/dashboard-items/dashboard-cards.compone
 export default function Dashboard () {
 
     return(
-        <div className="h-[90vh] overflow-y-auto overflow-visible p-5">
+        <div className="lg:mt-0 mt-20 lg:p-0 p-5">
             <PageSubNavigation title="Overview"/>
             <DashboardCards/>
         </div>

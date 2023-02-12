@@ -60,7 +60,7 @@ export default function DashboardCards() {
 
     return(
         <>
-            <div className="relative flex flex-row pt-3 pb-3 gap-2 ">
+            <div className="relative flex flex-col lg:flex-row pt-3 pb-3 gap-2 ">
                 <CardTemplate additionalClasses="text-sm 2xl:text-lg" additionalContentClasses="flex flex-col justify-between" title="Description">
                 <div>
                     Trellometrics is the key to quick and seamless
@@ -113,12 +113,12 @@ export default function DashboardCards() {
                     </hgroup>
                 </CardTemplate>
             </div>
-            <div className="relative flex flex-row pt-3 pb-3 gap-2">
-                <CardTemplate additionalClasses="text-sm 2xl:text-lg w-fit" title="Recent Activity">
+            <div className="relative flex flex-col lg:flex-row pt-3 pb-3 gap-2">
+                <CardTemplate additionalClasses="text-sm 2xl:text-lg lg:w-fit w-full" title="Recent Activity">
                     <DashboardRecentActivity/>
                 </CardTemplate>
                 <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Active Members (5 members)">
-                    <Bar data={data} options={options} style={{color: "white", height: "100px"}}/>
+                    <Bar data={data} options={options} style={{color: "white", height: "220px"}}/>
                 </CardTemplate>
             </div>
         </>
