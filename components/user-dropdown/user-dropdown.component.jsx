@@ -8,19 +8,19 @@ export default function UserDropdown() {
     const { isUserOpen, setIsUserOpen } = useContext(UserContext);
 
     return(
-        <div className={`relative rounded-2xl ${isUserOpen ? "bg-primary-color" : ""}`}>
-            <button className={`${isUserOpen ? "" : "bg-primary-color"} rounded-2xl p-2 w-full`} type="button" onClick={() => setIsUserOpen(!isUserOpen)}>
+        <div className="relative">
+            <button className={`relative ${isUserOpen ? "" : "bg-primary-color"} z-[16] rounded-2xl p-2 w-full`} type="button" onClick={() => setIsUserOpen(!isUserOpen)}>
                 <div className="h-full inline align-middle mr-2">
                     <div className="w-[35px] h-[35px] shadow-primary rounded-full bg-cover inline-block bg-center h-screen bg-no-repeat" style={{"backgroundImage": `url(${PlaceholderAvatar.src})`}}></div>
                 </div>
                 A much longer name
                 <svg className="w-4 h-4 ml-2 inline" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
-            <div className={`relative pb-3 pr-3 pl-3 leading-8 ${isUserOpen ? "" : "hidden"}`}>
-                <ul>
-                    <li className="cursor-pointer"><IoSettingsOutline className="inline mr-4" size={22}/>Settings</li>
-                    <li className="cursor-pointer"><IoIosLogOut className="inline mr-4" size={22}/>Sign Out</li>
-                </ul>
+            <div className={`absolute w-full pb-3 pr-3 pl-3 top-0 pt-12 z-[14] rounded-2xl drop-shadow-primary leading-8 ${isUserOpen ? "bg-primary-color-full" : "hidden"}`}>
+                <div>
+                    <button className="block"><IoSettingsOutline className="inline mr-4" size={22}/>Settings</button>
+                    <button className="block"><IoIosLogOut className="inline mr-4" size={22}/>Sign Out</button>
+                </div>
             </div>
         </div>
     );

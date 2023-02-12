@@ -4,7 +4,7 @@ import Notifications from "../notifications/notifications.component";
 
 export default function Navigation() {
     return(
-        <nav className="flex flex-row justify-between"> 
+        <nav className="relative flex flex-row justify-between z-[15]"> 
             <SearchBar/>
             <ul className="flex flex-row">  
                 <Notifications/>
