@@ -3,7 +3,8 @@ import PageSubNavigation from "@/components/page-template/page-subnavigation.com
 import Button from "@/components/buttons/button.component";
 import ProgressBar from "@/components/progressbar/progressbar.component";
 import DashboardRecentActivity from "@/components/dashboard-items/dashboard-recent-activity.component";
-// import { CanvasJSChart } from "canvasjs-react-charts";
+import Chart  from "chart.js/auto";
+import { Bar } from 'react-chartjs-2';
 import { SlQuestion } from "react-icons/sl";
 
 // To be removed
@@ -12,34 +13,51 @@ import 'react-circular-progressbar/dist/styles.css';
 
 export default function Dashboard () {
 
+    const data = {
+      labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      datasets: [
+        {
+          // Label for bars
+          label: "Active Members",
+          // Data or value of your each variable
+          data: [0,2,5,4,1,1,0],
+          // Color of each bar
+          backgroundColor: "rgba(0,0,0,0.8)",
+          // Border color of each bar
+          borderColor: "#fff",
+          borderWidth: 0.5,
+        },
+      ],
+    }
 
-    const options = {
-        title: {
-          text: ""
+    const options={
+      maintainAspectRatio: false,
+      scales: {
+        y: 
+          {
+            ticks: {
+              precision: 0,
+              beginAtZero: true,
+              color: "#fff"
+            },
+            grid: { color: "#000", borderColor: "#000"}
+          },
+        x:
+          {
+            ticks: {
+              color: "#fff"
+            },
+            grid: { color: "#000", borderColor: "#000"}
+          },
+      },
+      plugins: {
+        legend: {
+            display: false,
+          labels: {
+            fontSize: 15,
+          },
         },
-        backgroundColor: "transparent",
-        axisX: {
-            labelFontColor: "#fff",
-            lineColor: "#fff",
-        },
-        axisY: {
-            labelFontColor: "#fff",
-            lineColor: "#fff",
-            gridColor: "#fff",
-            maximum: 5,
-        },
-        data: [{				
-                  type: "column",
-                  dataPoints: [
-                      { label: "Sun",  y: 2  },
-                      { label: "Mon", y: 1  },
-                      { label: "Tues", y: 2  },
-                      { label: "Weds",  y: 5  },
-                      { label: "Thurs",  y: 2  },
-                      { label: "Fri",  y: 0  },
-                      { label: "Sat",  y: 1  }
-                  ]
-         }]
+      }
     }
 
     return(
@@ -103,7 +121,7 @@ export default function Dashboard () {
                     <DashboardRecentActivity/>
                 </CardTemplate>
                 <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Active Members (5 members)">
-                    {/* <CanvasJSChart options={options} containerProps={{ width: '100%', height: '300px' }} /> */}
+                    <Bar data={data} options={options} style={{color: "white", height: "100px"}}/>
                 </CardTemplate>
             </div>
 
