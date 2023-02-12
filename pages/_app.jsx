@@ -4,10 +4,11 @@ import Background from "@/components/background.component";
 import Sidebar from "@/components/sidebar.component";
 import Navigation from "@/components/navigation/navigation.component";
 import styles from '../styles/Home.module.css';
+import { BoardContextProvider } from "@/context/board.context";
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <BoardContextProvider>
       <Head>
       <title>Trello Dashboard</title>
       <meta name="description" content="View your trello boards statistics" />
@@ -24,6 +25,6 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </section>
       </main>
-    </>
+    </BoardContextProvider>
   )
 }
