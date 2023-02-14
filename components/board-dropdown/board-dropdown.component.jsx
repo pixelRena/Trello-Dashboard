@@ -3,7 +3,7 @@ import { BoardContext } from "@/context/board.context";
 import { BiChevronDown } from "react-icons/bi";
 import BoardItems from "../board-items/board-items.component";
 
-export default function isBoardOpen() {
+export default function BoardDropdown() {
     const { isBoardOpen, setIsBoardOpen } = useContext(BoardContext);
     // To be removed with api implementation
     const boardName = "Trellometrics.com";
