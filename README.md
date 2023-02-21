@@ -7,7 +7,7 @@
   <p align="center">
     View the metrics of your boards on Trello using Trellometrics. View who is active or inactive on your boards, how many cards are in each list, due dates that are coming up, and more!
     <br />
-    <a href="#">Demo Unavailable</a>
+    <a href="https://beta-trello-dashboard.vercel.app/" target="_blank">Demo</a>
     ·
     <a href="https://github.com/pixelRena/trello-dashboard/issues">Report Bug</a>
   </p>
