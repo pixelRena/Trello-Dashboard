@@ -14,7 +14,7 @@ module.exports = {
           'primary-color-full': 'linear-gradient(134.07deg, rgba(108, 102, 174, 1) 23.13%, rgba(196, 73, 158, 1) 122.17%)'
         },
         boxShadow: {
-          'primary': '0px 0px 4px 1px rgba(0, 0, 0, 0.4)',
+          'primary': '0px 0px 4px 1px rgba(0, 0, 0, 0.3)',
         },
         dropShadow: {
           'primary': '0px 0px 15px rgba(0, 0, 0, 0.25)',

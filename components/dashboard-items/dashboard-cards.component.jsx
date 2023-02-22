@@ -92,11 +92,11 @@ export default function DashboardCards() {
                 </CardTemplate>
                 <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Cards (20)" additionalContentClasses="justify-around flex flex-col">
                     <div>
-                        <div className="pb-2">Completed <span className="float-right">13</span></div>
+                        <div className="pb-2">Completed <span className="float-right">13 <span className="opacity-80">{'(65%)'}</span></span></div>
                         <ProgressBar max={25} value={15} type="good"/>
                     </div>
                     <div>
-                        <div className="pb-2">Remaining <span className="float-right">7</span></div>
+                        <div className="pb-2">Remaining <span className="float-right">7 <span className="opacity-80">{'(35%)'}</span></span></div>
                         <ProgressBar max={100} value={15}/>
                     </div>
                     <div className="self-end">
