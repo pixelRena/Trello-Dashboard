@@ -20,10 +20,25 @@ export default function DashboardCards() {
             // Data or value of your each variable
             data: [0,2,5,4,1,1,0],
             // Color of each bar
-            backgroundColor: "rgba(0,0,0,0.8)",
-            // Border color of each bar
-            borderColor: "#fff",
-            borderWidth: 0.5,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.5)',
+              'rgba(255, 159, 64, 0.5)',
+              'rgba(255, 205, 86, 0.5)',
+              'rgba(75, 192, 192, 0.5)',
+              'rgba(54, 162, 235, 0.5)',
+              'rgba(153, 102, 255, 0.5)',
+              'rgba(201, 203, 207, 0.5)'
+            ],
+            borderColor: [
+              'rgb(255, 99, 132)',
+              'rgb(255, 159, 64)',
+              'rgb(255, 205, 86)',
+              'rgb(75, 192, 192)',
+              'rgb(54, 162, 235)',
+              'rgb(153, 102, 255)',
+              'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1,
           },
         ],
       }
@@ -38,14 +53,20 @@ export default function DashboardCards() {
                 beginAtZero: true,
                 color: "#fff"
               },
-              grid: { color: "#000", borderColor: "#000"}
+              grid: { 
+                display: false,
+                borderColor: "#fff"
+              }
             },
           x:
             {
               ticks: {
                 color: "#fff"
               },
-              grid: { color: "#000", borderColor: "#000"}
+              grid: { 
+                display: false, 
+                borderColor: "#fff" 
+              }
             },
         },
         plugins: {
