@@ -20,8 +20,8 @@ export default function UserDropdown() {
             </button>
             <div className={`absolute w-full pb-3 pr-3 pl-3 top-0 pt-12 z-[14] rounded-2xl drop-shadow-primary leading-8 ${isUserOpen ? "bg-primary-color backdrop-blur-2xl" : "hidden"}`}>
                 <div>
-                    <button className="block"><IoSettingsOutline className="inline mr-4" size={22}/>Settings</button>
-                    <button className="block"><IoIosLogOut className="inline mr-4" size={22}/>Sign Out</button>
+                    <button className="block hover:opacity-70"><IoSettingsOutline className="inline mr-4" size={22}/>Settings</button>
+                    <button className="block hover:opacity-70"><IoIosLogOut className="inline mr-4" size={22}/>Sign Out</button>
                 </div>
             </div>
         </div>
