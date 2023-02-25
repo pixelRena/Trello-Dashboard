@@ -9,7 +9,8 @@ export default function UserDropdown() {
 
     return(
         <div className="relative">
-            <button className={`relative ${isUserOpen ? "" : "bg-primary-color"} z-[16] rounded-2xl lg:px-2 lg:py-1 p-3 w-full`} type="button" onClick={() => setIsUserOpen(!isUserOpen)}>
+            <button className={`relative ${isUserOpen ? "" : "bg-primary-color"} z-[16] rounded-2xl lg:px-2 lg:py-1 p-3 w-full`} type="button" onClick={() => setIsUserOpen(!isUserOpen)} 
+            onBlur={() => setIsUserOpen(false)}>
                 <div className="h-full lg:inline align-middle mr-2 hidden">
                     <div className="w-[25px] h-[25px] lg:w-[35px] lg:h-[35px] shadow-primary rounded-full bg-cover inline-block bg-center h-screen bg-no-repeat" style={{"backgroundImage": `url(${PlaceholderAvatar.src})`}}></div>
                 </div>
