@@ -26,7 +26,7 @@ export default function Sidebar() {
                     <span className="mx-4">Dashboard</span>
                 </Link>
 
-                <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md  mb-3" href="#" onClick={() => setMenuOpen(false)}>
+                <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md  mb-3" href="/projects" onClick={() => setMenuOpen(false)}>
                     <HiOutlineDocument size={22}/>
                     <span className="mx-4">Projects</span>
                 </Link>
