@@ -4,6 +4,7 @@
     flex-direction: flex-column;
     z-index: 1;
     height: 100vh;
+    overflow: hidden;
 }
 
 @media (max-width: 767px) {
