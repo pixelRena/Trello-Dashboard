@@ -11,7 +11,7 @@ export default function Projects() {
     return(
         <div className="lg:mt-0 mt-20 lg:p-0 p-5">
             <PageSubNavigation title="Projects"/>
-            <div className="mt-24 flex flex-col-reverse lg:flex-row gap-x-7 h-full w-full justify-around">
+            <div className="lg:m-auto mt-24 flex flex-col-reverse lg:flex-row gap-x-7 h-full w-full justify-around">
                 <div className="flex flex-col py-3 gap-6 w-full">
                     <CardTemplate title="Checklist" additionalClasses="h-full">
                         <form className="h-full flex flex-col justify-between">
