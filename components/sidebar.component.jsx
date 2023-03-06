@@ -13,7 +13,7 @@ export default function Sidebar() {
     onClick={() => setMenuOpen(!menuOpen)}>
         MENU
     </button>
-    <aside className={`h-screen z-20 lg:bg-primary-color bg-primary-color-full lg:flex fixed lg:relative overflow-x-hidden flex-col lg:w-56 w-full px-4 py-8 overflow-y-auto ${menuOpen ? "" : "hidden"}`}>
+    <aside className={`h-screen z-20 mr-20 lg:bg-primary-color bg-primary-color-full lg:flex fixed lg:relative overflow-x-hidden flex-col lg:w-56 w-full px-4 py-8 overflow-y-auto ${menuOpen ? "" : "hidden"}`}>
         <div className="text-center m-auto">
             <span className="font-bold lg:text-xl text-2xl">Trellometrics</span>
             <img className="m-auto mt-5" src="/favicon.svg" alt="favicon"/>

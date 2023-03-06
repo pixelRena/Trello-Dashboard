@@ -18,8 +18,8 @@ export default function BoardDropdown() {
     const cardName = "Fix UI Glitch";
     
     return(
-        <div className="relative font-extralight w-full text-center ">
-            <div className="absolute pt-2 flex flex-col lg:pt-auto lg:gap-5 w-full lg:w-fit lg:flex-row">
+        <div className="relative font-extralight w-full text-center">
+            <div className="absolute flex flex-col lg:gap-5 w-full lg:w-fit lg:flex-row">
                 <div className={`${isBoardOpen && "rounded-2xl bg-primary-color backdrop-blur-2xl"}`}>
                     <button className={`pt-1 ml-2 mr-2 text-l border-b-[1px] border-transparent ${!isBoardOpen &&  "lg:hover:border-white"}`} onClick={() => setIsBoardOpen(!isBoardOpen)} onBlur={() => setIsBoardOpen(false)}>Current Board: {boardName} <BiChevronDown className="inline" size={25}/></button>
                     <div className={`relative board-dropdown pt-1 pb-1 ${!isBoardOpen && "hidden"}`}>
