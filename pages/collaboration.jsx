@@ -8,7 +8,7 @@ export default function Collaboration() {
             <PageSubNavigation title="Collaboration"/>
             <div className="relative flex flex-col lg:flex-row pt-3 pb-3 gap-2">
                 <CardTemplate title="Chatroom">
-                    <div></div>
+                    <div className="font-medium text-center">COMING SOON</div>
                     <ChatroomInput/>
                 </CardTemplate>
             </div>
