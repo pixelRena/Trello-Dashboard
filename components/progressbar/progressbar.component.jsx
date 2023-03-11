@@ -11,7 +11,7 @@ export default function ProgressBar({max, value, type}) {
                     padding: 2px;
                 } 
                 progress::-webkit-progress-value {
-                    background-color: ${type === "good" ? "#71EB84" : type === "bad" ? "#FF5C5C" : "#2C3EDC"}; 
+                    background-color: ${type === "good" ? "#71EB84" : type === "bad" ? "#A90B0B" : "#2C3EDC"}; 
                     border-radius: 9999px;
                 }
             `}

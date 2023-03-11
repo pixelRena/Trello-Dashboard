@@ -88,6 +88,7 @@ export default function ProjectsCards() {
                         </div>
                     </CardTemplate>
                 </div>
-            </div>
+                
+        </div>
     )
 }

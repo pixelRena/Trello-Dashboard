@@ -20,13 +20,13 @@ export default function App({ Component, pageProps }) {
             <meta name="description" content="View your trello boards statistics" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.svg" />
-            </Head>
-            <main className={styles.main}>
-              <Background/>
+            </Head>  
+            <Background/>
+            <main className={styles.main} >
               <section>
                 <Sidebar/>
               </section>
-              <section className="lg:mt-5 lg:mr-5 lg:ml-5 w-screen">
+              <section className="lg:mt-5 lg:mr-5 lg:ml-72 h-full">
                 <Navigation/>
                 <Component {...pageProps} />
               </section>
