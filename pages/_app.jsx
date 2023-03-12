@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import "@/styles/Calendar.css";
 import Head from "next/head";
 import Background from "@/components/background.component";
 import Sidebar from "@/components/sidebar.component";
