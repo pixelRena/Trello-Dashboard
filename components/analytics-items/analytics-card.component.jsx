@@ -7,6 +7,7 @@ import { AiOutlineArrowUp } from "react-icons/ai";
 // To be removed
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
+import Button from "../buttons/button.component";
 
 export default function AnalyticsCard() {
     const cycleData = {
@@ -56,12 +57,22 @@ export default function AnalyticsCard() {
                 <div>Card Completion progress has increased over the following week</div>
             </CardTemplate>
             <CardTemplate title="Cycle Time" additionalContentClasses="flex flex-col">
+                <div className="absolute hidden top-5 right-5 lg:flex flex-row gap-4">
+                    <Button current>This Week</Button>
+                    <Button>This Month</Button>
+                    <Button>This Year</Button>
+                </div>
                 <div>Displays how the time it takes for cards to be completed from start of creation date to finish</div>
                 <div className="w-[99%] h-[100%]">
                     <Line data={cycleData} options={options}/>
                 </div>
             </CardTemplate>
             <CardTemplate title="Lead Time" additionalClasses="flex flex-col h-full">
+                <div className="absolute hidden top-5 right-5 lg:flex flex-row gap-4">
+                    <Button current>This Week</Button>
+                    <Button>This Month</Button>
+                    <Button>This Year</Button>
+                </div>
                 <div>Displays the time it takes for cards to be completed when it is first worked on (first action) to finish</div>
                 <div className="w-[99%] h-[100%]">
                     <Line data={leadData} options={options}/>
