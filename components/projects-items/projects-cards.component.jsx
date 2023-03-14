@@ -38,7 +38,7 @@ export default function ProjectsCards() {
         <div className="mt-24 flex flex-col-reverse gap-x-7 h-full w-full justify-around lg:flex-row lg:m-auto">
                 <div className="flex flex-col py-3 gap-6 w-full">
                     <CardTemplate title="Checklist" additionalClasses="h-full">
-                        <div className="absolute top-4 right-5 flex-row gap-4 lg:top-5 lg:flex">
+                        <div className="absolute top-5 right-5 flex-row gap-4 lg:flex">
                             <Button>Switch</Button>
                         </div>
                         <form className="h-full flex flex-col">
@@ -57,7 +57,7 @@ export default function ProjectsCards() {
                         </form>
                     </CardTemplate>
                     <CardTemplate title="Activity Report" additionalClasses="w-full h-fit">
-                        <div className="absolute hidden top-5 right-5 lg:flex flex-row">
+                        <div className="absolute hidden top-5 right-5 flex-row lg:flex ">
                             <Button>Expand</Button>
                         </div>
                         <div className="font-extralight">How much activity has taken place in this card.</div>
@@ -70,7 +70,7 @@ export default function ProjectsCards() {
                 
                 <div className="flex flex-col py-3 gap-4 w-full justify-between lg:w-[90%]">
                     <CardTemplate title="Activity Feed" additionalContentClasses="flex flex-col gap-2"> 
-                        <div className="absolute top-4 right-5 flex-row gap-4 lg:top-5 lg:flex">
+                        <div className="absolute top-5 right-5 flex-row gap-4 lg:flex">
                             <Button>+</Button>
                         </div>
                         <Timeline>
