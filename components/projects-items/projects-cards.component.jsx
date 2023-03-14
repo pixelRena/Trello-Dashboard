@@ -1,3 +1,4 @@
+import Button from "../buttons/button.component";
 import CardTemplate from "@/components/card-template/card-template.component";
 import ProjectsInfoCardTemplate from "@/components/card-template/projects-info-card-template.component";
 import Chart  from "chart.js/auto";
@@ -33,9 +34,12 @@ export default function ProjectsCards() {
     }
 
     return(
-        <div className="lg:m-auto mt-24 flex flex-col-reverse lg:flex-row gap-x-7 h-full w-full justify-around">
+        <div className="mt-24 flex flex-col-reverse gap-x-7 h-full w-full justify-around lg:flex-row lg:m-auto">
                 <div className="flex flex-col py-3 gap-6 w-full">
                     <CardTemplate title="Checklist" additionalClasses="h-full">
+                        <div className="absolute top-4 right-5 flex-row gap-4 lg:top-5 lg:flex">
+                            <Button>Switch</Button>
+                        </div>
                         <form className="h-full flex flex-col">
                             <div>
                                 <input className="form-checkbox bg-transparent rounded-none border-2 border-white outline-none checked:border-white checked:bg-transparent h-5 w-5  focus:ring-transparent focus:border-none focus:outline-none focus:text-transparent hover:text-white/[.4]" type="checkbox"/>
@@ -52,6 +56,9 @@ export default function ProjectsCards() {
                         </form>
                     </CardTemplate>
                     <CardTemplate title="Activity Report" additionalClasses="w-full h-fit">
+                        <div className="absolute hidden top-5 right-5 lg:flex flex-row">
+                            <Button>Expand</Button>
+                        </div>
                         <div className="font-extralight">How much activity has taken place in this card.</div>
                         <div className="w-[99%] h-[100%]">
                             <Line data={data} options={options}/>
@@ -62,6 +69,9 @@ export default function ProjectsCards() {
                 
                 <div className="flex flex-col py-3 gap-4 w-full lg:w-[70%] justify-between">
                     <CardTemplate title="Activity Feed" additionalClasses="h-full" additionalContentClasses="flex flex-col gap-2"> 
+                        <div className="absolute top-4 right-5 flex-row gap-4 lg:top-5 lg:flex">
+                            <Button>+</Button>
+                        </div>
                         <div><span className="italic font-medium">Feb 1</span> Aya checked off 'Fix magnifying glass...'</div>
                         <div><span className="italic font-medium">Jan 25</span> Aya moved this card to Doing</div>
                         <div><span className="italic font-medium">Jan 20</span> Serena created ‘Checklist’</div>
