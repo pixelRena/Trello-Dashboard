@@ -2,37 +2,50 @@ import { useState } from "react";
 import CardTemplate from "@/components/card-template/card-template.component";
 import ChatroomInput from "@/components/inputs/chatroom-input.component";
 import Calendar from 'react-calendar';
+import Timeline from "../timeline-items/timeline.component";
 
 export default function CollaborationCard() {
-    const [value, onChange] = useState(new Date());
+    const [value, onValueChange] = useState(new Date());
     return(
             <div className="flex flex-col-reverse gap-2 lg:flex-row lg:gap-10">
-                <div className="flex flex-col w-full lg:flex-col pt-3 pb-3 gap-2">
-                    <div className="flex flex-col  lg:flex-col h-full gap-10">
+                <div className="flex flex-col lg:flex-col pt-3 pb-3 gap-2">
+                    <div className="flex flex-col lg:flex-col h-full gap-5">
                         <CardTemplate title="Chatroom" additionalClasses="h-full">
                             <ChatroomInput/>
                         </CardTemplate>
-                        <CardTemplate title="Activity Feed"  additionalContentClasses="flex flex-col gap-5">
-                            <div>
-                                <span className="font-medium italic">Weds</span> Aya checked off Fix magnifying glass... in <span className="font-medium"><q>Fix UI Glitches</q></span>
-                            </div>
-                            <div>
-                                <span className="font-medium italic">1/25</span> Aya moved <span className="font-medium"><q>Fix UI Glitches</q></span> card to <span className="font-medium">Doing</span>
-                            </div>
-                            <div>
-                                <span className="font-medium italic">1/20</span> Serena created <span className="font-medium"><q>Checklist</q></span> for <span className="font-medium"><q>Fix UI Glitches</q></span>
-                            </div>
-                            <div>
-                                <span className="font-medium italic">1/18</span> David moved <span className="font-medium"><q>Dark & Light Mode</q></span> card to <span className="font-medium">Completed</span>
-                            </div>
-                            <div>
-                                <span className="font-medium italic">1/15</span> Sarah Brown joined the board
-                            </div>
+                        <CardTemplate title="Activity Feed" additionalContentClasses="flex flex-col gap-5">
+                            <Timeline>
+                                <div className="timeline-data">
+                                    <div>Checklist: Fix Magnifying Glass</div>
+                                    <div>Thurs</div> 
+                                    <div>Aya marked the checklist item <q>Updating the search bar UI</q> complete</div>
+                                </div>
+                                <div className="timeline-data">
+                                    <div>Card: UI Glitches</div>
+                                    <div>Wed 1/25 5:32pm</div> 
+                                    <div>Aya moved this card to <q>Doing</q></div>
+                                </div>
+                                <div className="timeline-data">
+                                    <div>Checklist: UI Glitches</div>
+                                    <div>Fri 1/20 11:00am</div>
+                                    <div>Serena created the Checklist <q>Images in Grid</q> </div>
+                                </div>
+                                <div className="timeline-data">
+                                    <div>Card: Dark/Light Mode</div>
+                                    <div>Weds 1/18 9:10am</div> 
+                                    <div>David moved this card to Completed</div>
+                                </div>
+                                <div className="timeline-data">
+                                    <div>Members Joined</div>
+                                    <div>Sun 1/15 12:33pm</div>
+                                    <div>Sarah Brown joined the board</div>
+                                </div>  
+                            </Timeline>
                         </CardTemplate>
                     </div>
                 </div>
 
-                <div className="flex flex-col pt-3 pb-3 gap-2 w-fit">
+                <div className="flex flex-col pt-3 pb-3 gap-2 ">
                     <CardTemplate title="Calendar" additionalClasses="overflow-auto h-[300px] overflow-auto">
                         <Calendar
                             className="text-white rounded-lg"
@@ -55,7 +68,7 @@ export default function CollaborationCard() {
                     </CardTemplate>
                 </div>
 
-                <div className="flex w-full flex-col pt-3 pb-3 gap-2">
+                <div className="flex w-full flex-col pt-3 pb-3 gap-2 w-fit">
                     <CardTemplate title="Top Collaborator" additionalClasses="h-fit" additionalContentClasses="flex flex-col">
                         <div>
                             <img className="inline mr-2" src="/images/award.svg"/>
