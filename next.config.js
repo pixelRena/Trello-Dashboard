@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/dashboard',
+        permanent: true,
+      },
+    ]
+  },
   reactStrictMode: true,
   eslint: {
     // Warning: This allows production builds to successfully complete even if
