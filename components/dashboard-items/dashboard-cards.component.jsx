@@ -83,7 +83,12 @@ export default function DashboardCards() {
                   <DashboardRecentActivity/>
                 </CardTemplate>
                 <CardTemplate additionalClasses="text-sm 2xl:text-lg w-full" title="Active Members (5 members)">
-                    <div className="w-[90%] h-full flex items-end mx-auto">
+                    <div className="w-[90%] h-full flex flex-col items-end mx-auto">
+                        <div className="flex gap-2">
+                          <Button current={true}>This Week</Button>
+                          <Button>Last Week</Button>
+                          <Button>Last Month</Button>
+                        </div>
                         <Bar data={data} options={{
                           ...options,
                           plugins: {
