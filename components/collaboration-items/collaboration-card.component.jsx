@@ -3,6 +3,11 @@ import CardTemplate from "@/components/card-template/card-template.component";
 import ChatroomInput from "@/components/inputs/chatroom-input.component";
 import Calendar from 'react-calendar';
 import Timeline from "../timeline-items/timeline.component";
+// To be removed
+import Aya from '../../test/Aya.jpg';
+import David from '../../test/David.jpg';
+import Michael from '../../test/Michael.jpg';
+import Sarah from '../../test/Sarah.jpg';
 
 export default function CollaborationCard() {
     const [value, onValueChange] = useState(new Date());
@@ -45,7 +50,7 @@ export default function CollaborationCard() {
                     </div>
                 </div>
 
-                <div className="flex flex-col pt-3 pb-3 gap-2 ">
+                <div className="flex flex-col pt-3 pb-3 gap-2">
                     <CardTemplate title="Calendar" additionalClasses="overflow-auto h-[300px] overflow-auto">
                         <Calendar
                             className="text-white rounded-lg"
@@ -80,25 +85,25 @@ export default function CollaborationCard() {
                     </CardTemplate>
                     <CardTemplate title="Active Members (4)" additionalClasses="h-[90%] overflow-auto">
                         <div className="flex flex-row w-full items-center gap-x-3 pb-2">
-                            <div className="rounded-full w-[45px] h-[45px] bg-white"></div>
+                            <div className="rounded-full w-[45px] h-[45px] bg-center bg-white" style={{"backgroundImage": `url(${Aya.src})`}}></div>
                             <div>Aya Lewis</div>
                         </div>
                         <div className="flex flex-row w-full items-center gap-x-3 pb-2">
-                            <div className="rounded-full w-[45px] h-[45px] bg-white"></div>
+                            <div className="rounded-full w-[45px] h-[45px] bg-center bg-white" style={{"backgroundImage": `url(${David.src})`}}></div>
                             <div>David Baker</div>
                         </div>
                         <div className="flex flex-row w-full items-center gap-x-3 pb-2">
-                            <div className="rounded-full w-[45px] h-[45px] bg-white"></div>
+                            <div className="rounded-full w-[45px] h-[45px] bg-center bg-white" style={{"backgroundImage": `url(${Michael.src})`}}></div>
                             <div>Michael Lewis</div>
                         </div>
                         <div className="flex flex-row w-full items-center gap-x-3">
-                            <div className="rounded-full w-[45px] h-[45px] bg-white"></div>
+                            <div className="rounded-full w-[45px] h-[45px] bg-center bg-white"></div>
                             <div>Serena D.</div>
                         </div>
                     </CardTemplate>
                     <CardTemplate title="Inactive Members (1)" additionalClasses="h-full">
                         <div className="flex flex-row w-full items-center gap-x-3">
-                            <div className="rounded-full w-[45px] h-[45px] bg-white"></div>
+                            <div className="rounded-full w-[45px] h-[45px] bg-center bg-white" style={{"backgroundImage": `url(${Sarah.src})`}}></div>
                             <div>Sarah Brown</div>
                         </div>
                     </CardTemplate>
