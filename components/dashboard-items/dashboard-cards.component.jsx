@@ -48,7 +48,7 @@ export default function DashboardCards() {
                     </div>
                 </CardTemplate>
                 <CardTemplate additionalClasses="text-2xl" title="Cycle Time">
-                    <div className="m-auto w-4/6">
+                    <div className="m-auto w-[60%]">
                         <CircularProgressbar value={70} text={"5 days"}
                             strokeWidth={6}
                             styles={buildStyles({
@@ -63,7 +63,7 @@ export default function DashboardCards() {
                     </hgroup>
                 </CardTemplate>
                 <CardTemplate additionalClasses="text-2xl" title="Lead Time">
-                    <div className="m-auto w-4/6">
+                    <div className="m-auto w-[60%]">
                         <CircularProgressbar value={90} text={"2 days"}
                             strokeWidth={6}
                             styles={buildStyles({
@@ -78,12 +78,12 @@ export default function DashboardCards() {
                     </hgroup>
                 </CardTemplate>
             </div>
-            <div className="relative flex flex-col lg:flex-row pt-3 pb-3 gap-2">
+            <div className="relative flex flex-col lg:flex-row pt-3 pb-3 gap-2" style={{flex: "1 1 0"}}>
                 <CardTemplate additionalClasses="text-sm 2xl:text-lg lg:w-fit w-full" title="Recent Activity">
-                    <DashboardRecentActivity/>
+                  <DashboardRecentActivity/>
                 </CardTemplate>
                 <CardTemplate additionalClasses="text-sm 2xl:text-lg w-full" title="Active Members (5 members)">
-                    <div className="w-[90%]">
+                    <div className="w-[90%] h-full flex items-end mx-auto">
                         <Bar data={data} options={{
                           ...options,
                           plugins: {
