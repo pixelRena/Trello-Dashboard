@@ -5,10 +5,12 @@ import Chart  from "chart.js/auto";
 import { Line } from 'react-chartjs-2';
 import { options, weekLabels, lineChartBackgroundColor } from "@/utils/chart-settings/chart.options";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import Timeline from "../timeline-items/timeline.component";
 // To be removed
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
-import Timeline from "../timeline-items/timeline.component";
+import Aya from '../../test/Aya.jpg';
+import David from '../../test/David.jpg';
 
 export default function ProjectsCards() {
     const data = {
@@ -132,11 +134,11 @@ export default function ProjectsCards() {
                     </CardTemplate>
                     <CardTemplate title="Members Assigned (2)" additionalClasses="h-full">
                         <div className="flex flex-row w-full items-center gap-x-3 pb-2">
-                            <div className="rounded-full w-[45px] h-[45px] bg-white"></div>
+                            <div className="rounded-full w-[45px] h-[45px] bg-center bg-white" style={{"backgroundImage": `url(${Aya.src})`}}></div>
                             <div>Aya Lewis</div>
                         </div>
                         <div className="flex flex-row w-full items-center gap-x-3">
-                            <div className="rounded-full w-[45px] h-[45px] bg-white"></div>
+                            <div className="rounded-full w-[45px] h-[45px] bg-center bg-white" style={{"backgroundImage": `url(${David.src})`}}></div>
                             <div>David Baker</div>
                         </div>
                     </CardTemplate>
