@@ -1,11 +1,42 @@
 import CardTemplate from "@/components/card-template/card-template.component";
 import ProgressBar from "@/components/progressbar/progressbar.component";
-import {AiOutlineArrowUp} from "react-icons/ai";
+import Chart  from "chart.js/auto";
+import { Line } from 'react-chartjs-2';
+import { options, weekLabels, lineChartBackgroundColor } from "@/utils/chart-settings/chart.options";
+import { AiOutlineArrowUp } from "react-icons/ai";
 // To be removed
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 
 export default function AnalyticsCard() {
+    const cycleData = {
+        labels: weekLabels,
+        datasets: [
+        {
+            backgroundColor: lineChartBackgroundColor,
+            label: "Cycle Time (Days)",
+            data: [0, 3, 2, 6, 2, 2, 1],
+            fill: true,
+            borderColor: 'rgb(75, 192, 192)',
+            pointHoverRadius: 5,
+            pointRadius: 5,
+        }],
+    }
+
+    const leadData = {
+        labels: weekLabels,
+        datasets: [
+        {
+            backgroundColor: lineChartBackgroundColor,
+            label: "Lead Time (Days)",
+            data: [3, 1, 1, 1, 2, 3, 4],
+            fill: true,
+            borderColor: 'rgb(75, 192, 192)',
+            pointHoverRadius: 5,
+            pointRadius: 5,
+        }],
+    }
+
     return(
         <div className="flex flex-col gap-2 lg:flex-row lg:gap-10 w-full">
         <div className=" flex flex-col lg:flex-col pt-3 pb-3 gap-5 w-full">
@@ -26,11 +57,15 @@ export default function AnalyticsCard() {
             </CardTemplate>
             <CardTemplate title="Cycle Time" additionalContentClasses="flex flex-col">
                 <div>Displays how the time it takes for cards to be completed from start of creation date to finish</div>
-                <div className="w-[300px] h-[250px] bg-contain bg-center bg-no-repeat" style={{backgroundImage:`url(images/NBcharts-lineChats.png)`}}></div>
+                <div className="w-[99%] h-[100%]">
+                    <Line data={cycleData} options={options}/>
+                </div>
             </CardTemplate>
             <CardTemplate title="Lead Time" additionalClasses="flex flex-col h-full">
-                <div>Displays how the time it takes for cards to be completed when it is first worked on (first action) to finish</div>
-                <div className="font-bold text-center pt-16">DATA TO BE DISPLAYED</div>
+                <div>Displays the time it takes for cards to be completed when it is first worked on (first action) to finish</div>
+                <div className="w-[99%] h-[100%]">
+                    <Line data={leadData} options={options}/>
+                </div>
             </CardTemplate>
         </div>
 
@@ -60,7 +95,7 @@ export default function AnalyticsCard() {
             </CardTemplate>
                 
             <div className="font-extrabold text-3xl text-center">Card Statistics</div>
-            <div className="flex flex-row gap-5">
+            <div className="flex flex-row gap-5 h-full">
                 <CardTemplate title="Milestones">
                     <div className="m-auto w-5/6 lg:w-4/6">
                             <CircularProgressbar value={10} text={"10%"}
@@ -88,7 +123,7 @@ export default function AnalyticsCard() {
                 </CardTemplate>
             </div>
 
-            <div className="flex flex-row gap-5">
+            <div className="flex flex-row gap-5 h-full">
                 <CardTemplate title="Total Cards">
                     <div className="font-extrabold text-8xl text-center ">20</div>
                 </CardTemplate>
@@ -97,7 +132,7 @@ export default function AnalyticsCard() {
                 </CardTemplate>
             </div>
 
-            <div className="flex flex-row gap-5">
+            <div className="flex flex-row gap-5 h-full">
                 <CardTemplate title="Doing Cards">
                     <div className="font-extrabold text-8xl text-center ">5</div>
                 </CardTemplate>

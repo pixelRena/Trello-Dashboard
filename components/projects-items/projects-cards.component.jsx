@@ -1,16 +1,42 @@
 import CardTemplate from "@/components/card-template/card-template.component";
 import ProjectsInfoCardTemplate from "@/components/card-template/projects-info-card-template.component";
+import Chart  from "chart.js/auto";
+import { Line } from 'react-chartjs-2';
+import { options, weekLabels, lineChartBackgroundColor } from "@/utils/chart-settings/chart.options";
 import { AiOutlineArrowDown } from "react-icons/ai";
 // To be removed
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 
 export default function ProjectsCards() {
+    const data = {
+        labels: weekLabels,
+        datasets: [
+        {
+            backgroundColor: lineChartBackgroundColor,
+            label: "Cards Moved",
+            data: [3, 1, 5, 1, 0, 1, 3],
+            fill: true,
+            borderColor: 'rgb(75, 192, 192)',
+            pointHoverRadius: 5,
+            pointRadius: 5,
+        },
+        {
+            backgroundColor: "rgba(255, 192, 203, 0.3)",
+            label: "Comments Made",
+            data: [2, 3, 5, 2, 7, 2, 1],
+            fill: true,
+            borderColor: 'rgba(255, 192, 203)',
+            pointHoverRadius: 5,
+            pointRadius: 5,
+        }],
+    }
+
     return(
         <div className="lg:m-auto mt-24 flex flex-col-reverse lg:flex-row gap-x-7 h-full w-full justify-around">
                 <div className="flex flex-col py-3 gap-6 w-full">
                     <CardTemplate title="Checklist" additionalClasses="h-full">
-                        <form className="h-full flex flex-col justify-between">
+                        <form className="h-full flex flex-col">
                             <div>
                                 <input className="form-checkbox bg-transparent rounded-none border-2 border-white outline-none checked:border-white checked:bg-transparent h-5 w-5  focus:ring-transparent focus:border-none focus:outline-none focus:text-transparent hover:text-white/[.4]" type="checkbox"/>
                                 <label className="font-normal pl-2">Fix magnifying glass on search input is floating</label>
@@ -25,15 +51,17 @@ export default function ProjectsCards() {
                             </div>
                         </form>
                     </CardTemplate>
-                    <CardTemplate title="Activity Report">
+                    <CardTemplate title="Activity Report" additionalClasses="w-full h-fit">
                         <div className="font-extralight">How much activity has taken place in this card.</div>
-                        <div className="w-[300px] h-[250px] bg-contain bg-center bg-no-repeat" style={{backgroundImage:`url(images/NBcharts-lineChats.png)`}}></div>
+                        <div className="w-[99%] h-[100%]">
+                            <Line data={data} options={options}/>
+                        </div>
                     </CardTemplate>
                 </div>
 
                 
                 <div className="flex flex-col py-3 gap-4 w-full lg:w-[70%] justify-between">
-                    <CardTemplate title="Activity Feed" additionalClasses="h-full" additionalContentClasses="flex flex-col justify-between"> 
+                    <CardTemplate title="Activity Feed" additionalClasses="h-full" additionalContentClasses="flex flex-col gap-2"> 
                         <div><span className="italic font-medium">Feb 1</span> Aya checked off 'Fix magnifying glass...'</div>
                         <div><span className="italic font-medium">Jan 25</span> Aya moved this card to Doing</div>
                         <div><span className="italic font-medium">Jan 20</span> Serena created ‘Checklist’</div>

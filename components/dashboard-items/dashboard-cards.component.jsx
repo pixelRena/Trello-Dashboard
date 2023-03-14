@@ -4,6 +4,7 @@ import CardTemplate from "../card-template/card-template.component";
 import DashboardRecentActivity from "./dashboard-recent-activity.component";
 import Chart  from "chart.js/auto";
 import { Bar } from 'react-chartjs-2';
+import { options, weekLabels, barChartBackgroundColors, barChartBorderColors } from "@/utils/chart-settings/chart.options";
 import { SlQuestion } from "react-icons/sl";
 
 // To be removed
@@ -12,72 +13,15 @@ import 'react-circular-progressbar/dist/styles.css';
 
 export default function DashboardCards() {
     const data = {
-        labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-        datasets: [
-          {
-            // Label for bars
-            label: "Active Members",
-            // Data or value of your each variable
-            data: [0,2,5,4,1,1,0],
-            // Color of each bar
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.5)',
-              'rgba(255, 159, 64, 0.5)',
-              'rgba(255, 205, 86, 0.5)',
-              'rgba(75, 192, 192, 0.5)',
-              'rgba(54, 162, 235, 0.5)',
-              'rgba(153, 102, 255, 0.5)',
-              'rgba(201, 203, 207, 0.5)'
-            ],
-            borderColor: [
-              'rgb(255, 99, 132)',
-              'rgb(255, 159, 64)',
-              'rgb(255, 205, 86)',
-              'rgb(75, 192, 192)',
-              'rgb(54, 162, 235)',
-              'rgb(153, 102, 255)',
-              'rgb(201, 203, 207)'
-            ],
-            borderWidth: 1,
-          },
-        ],
-      }
-  
-      const options={
-        maintainAspectRatio: false,
-        scales: {
-          y: 
-            {
-              ticks: {
-                precision: 0,
-                beginAtZero: true,
-                color: "#fff"
-              },
-              grid: { 
-                display: false,
-                borderColor: "#fff"
-              }
-            },
-          x:
-            {
-              ticks: {
-                color: "#fff"
-              },
-              grid: { 
-                display: false, 
-                borderColor: "#fff" 
-              }
-            },
-        },
-        plugins: {
-          legend: {
-              display: false,
-            labels: {
-              fontSize: 15,
-            },
-          },
-        }
-      }
+      labels: weekLabels,
+      datasets: [{
+        data: [0,2,5,4,1,1,0],
+        label: "Active Members",
+        backgroundColor: barChartBackgroundColors,
+        borderColor: barChartBorderColors,
+        borderWidth: 1,
+      }],
+    }
 
     return(
         <>
@@ -135,11 +79,19 @@ export default function DashboardCards() {
                 </CardTemplate>
             </div>
             <div className="relative flex flex-col lg:flex-row pt-3 pb-3 gap-2">
-                <CardTemplate additionalClasses="text-sm 2xl:text-lg lg:w-fit h-fit w-full" title="Recent Activity">
+                <CardTemplate additionalClasses="text-sm 2xl:text-lg lg:w-fit w-full" title="Recent Activity">
                     <DashboardRecentActivity/>
                 </CardTemplate>
-                <CardTemplate additionalClasses="text-sm 2xl:text-lg" title="Active Members (5 members)">
-                    <Bar data={data} options={options} style={{color: "white", height: "220px"}}/>
+                <CardTemplate additionalClasses="text-sm 2xl:text-lg w-full" title="Active Members (5 members)">
+                    <div className="w-[90%]">
+                        <Bar data={data} options={{
+                          ...options,
+                          plugins: {
+                              legend: {
+                              display: false,
+                            }
+                          }}}/>
+                    </div>
                 </CardTemplate>
             </div>
         </>
