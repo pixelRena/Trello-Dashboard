@@ -8,6 +8,7 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 // To be removed
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
+import Timeline from "../timeline-items/timeline.component";
 
 export default function ProjectsCards() {
     const data = {
@@ -67,14 +68,28 @@ export default function ProjectsCards() {
                 </div>
 
                 
-                <div className="flex flex-col py-3 gap-4 w-full lg:w-[70%] justify-between">
-                    <CardTemplate title="Activity Feed" additionalClasses="h-full" additionalContentClasses="flex flex-col gap-2"> 
+                <div className="flex flex-col py-3 gap-4 w-full justify-between lg:w-[90%]">
+                    <CardTemplate title="Activity Feed" additionalContentClasses="flex flex-col gap-2"> 
                         <div className="absolute top-4 right-5 flex-row gap-4 lg:top-5 lg:flex">
                             <Button>+</Button>
                         </div>
-                        <div><span className="italic font-medium">Feb 1</span> Aya checked off 'Fix magnifying glass...'</div>
-                        <div><span className="italic font-medium">Jan 25</span> Aya moved this card to Doing</div>
-                        <div><span className="italic font-medium">Jan 20</span> Serena created ‘Checklist’</div>
+                        <Timeline>
+                            <div className="timeline-data">
+                                <div>Checklist: Fix Magnifying Glass</div>
+                                <div>Thurs</div> 
+                                <div>Aya marked the checklist item <q>Updating the search bar UI</q> complete</div>
+                            </div>
+                            <div className="timeline-data">
+                                <div>Card: UI Glitches</div>
+                                <div>Wed 1/25 5:32pm</div> 
+                                <div>Aya moved this card to <q>Doing</q></div>
+                            </div>
+                            <div className="timeline-data">
+                                <div>Checklist: UI Glitches</div>
+                                <div>Fri 1/20 11:00am</div>
+                                <div>Serena created the Checklist <q>Images in Grid</q> </div>
+                            </div>
+                        </Timeline>
                     </CardTemplate>
                     <div className="flex flex-col gap-4">
                         <CardTemplate title="Card Completion">
@@ -97,7 +112,7 @@ export default function ProjectsCards() {
                 </div>
 
 
-                <div className="flex flex-col py-3 gap-5 w-full lg:w-[90%] justify-around">
+                <div className="flex flex-col py-3 gap-5 w-full lg:w-[75%] justify-around">
                     <div className="flex flex-col justify-start gap-3 h-full">
                         <ProjectsInfoCardTemplate title="Due Date">
                             February 5, 2023
@@ -112,10 +127,10 @@ export default function ProjectsCards() {
                             <span className="text-green-400 not-italic">On-track</span>
                         </ProjectsInfoCardTemplate>
                     </div>
-                    <CardTemplate title="Description">
+                    <CardTemplate title="Description" additionalClasses="h-full">
                         There are a couple of bug fixes that  have been causing instability when trying to check statistics. Bug fixes are listed in the checklist.
                     </CardTemplate>
-                    <CardTemplate title="Members Assigned (2)">
+                    <CardTemplate title="Members Assigned (2)" additionalClasses="h-full">
                         <div className="flex flex-row w-full items-center gap-x-3 pb-2">
                             <div className="rounded-full w-[45px] h-[45px] bg-white"></div>
                             <div>Aya Lewis</div>
