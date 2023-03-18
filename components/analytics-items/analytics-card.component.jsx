@@ -10,33 +10,33 @@ import 'react-circular-progressbar/dist/styles.css';
 import Button from "../buttons/button.component";
 
 export default function AnalyticsCard() {
-    const cycleData = {
-        labels: weekLabels,
-        datasets: [
-        {
-            backgroundColor: lineChartBackgroundColor,
-            label: "Cycle Time (Days)",
-            data: [0, 3, 2, 6, 2, 2, 1],
-            fill: true,
-            borderColor: 'rgb(75, 192, 192)',
-            pointHoverRadius: 5,
-            pointRadius: 5,
-        }],
-    }
+    // const cycleData = {
+    //     labels: weekLabels,
+    //     datasets: [
+    //     {
+    //         backgroundColor: lineChartBackgroundColor,
+    //         label: "Cycle Time (Days)",
+    //         data: [0, 3, 2, 6, 2, 2, 1],
+    //         fill: true,
+    //         borderColor: 'rgb(75, 192, 192)',
+    //         pointHoverRadius: 5,
+    //         pointRadius: 5,
+    //     }],
+    // }
 
-    const leadData = {
-        labels: weekLabels,
-        datasets: [
-        {
-            backgroundColor: lineChartBackgroundColor,
-            label: "Lead Time (Days)",
-            data: [3, 1, 1, 1, 2, 3, 4],
-            fill: true,
-            borderColor: 'rgb(75, 192, 192)',
-            pointHoverRadius: 5,
-            pointRadius: 5,
-        }],
-    }
+    // const leadData = {
+    //     labels: weekLabels,
+    //     datasets: [
+    //     {
+    //         backgroundColor: lineChartBackgroundColor,
+    //         label: "Lead Time (Days)",
+    //         data: [3, 1, 1, 1, 2, 3, 4],
+    //         fill: true,
+    //         borderColor: 'rgb(75, 192, 192)',
+    //         pointHoverRadius: 5,
+    //         pointRadius: 5,
+    //     }],
+    // }
 
     return(
         <div className="flex flex-col gap-2 lg:flex-row lg:gap-10 w-full">
