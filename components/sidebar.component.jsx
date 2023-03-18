@@ -32,7 +32,7 @@ export default function Sidebar() {
                     <span className="mx-4">Projects</span>
                 </Link>
 
-                <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md  mb-3" href="/analytics" onClick={() => setIsSidebarOpen(false)}>
+                <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md  mb-3" href="/testpagename" onClick={() => setIsSidebarOpen(false)}>
                     <HiOutlineShare color={router.pathname === "/testpagename" && "#2C3EDC"} size={22}/>
                     <span className="mx-4">Analytics</span>
                 </Link>
