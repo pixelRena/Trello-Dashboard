@@ -40,7 +40,7 @@ export default function AnalyticsCard() {
 
     return(
         <div className="flex flex-col gap-2 lg:flex-row lg:gap-10 w-full">
-        <div className=" flex flex-col lg:flex-col pt-3 pb-3 gap-5 w-full">
+        {/* <div className=" flex flex-col lg:flex-col pt-3 pb-3 gap-5 w-full">
             <CardTemplate additionalClasses="text-2xl 2xl:text-lg" additionalContentClasses="flex flex-col" title="Board Activity">
                 <div>
                     <span className="font-bold text-green-400">+4</span> New Activity
@@ -78,7 +78,7 @@ export default function AnalyticsCard() {
                     <Line id="line-lead-time" data={leadData} options={options}/>
                 </div>
             </CardTemplate>
-        </div>
+        </div> */}
 
 
         {/* <div className=" flex flex-col lg:flex-col pt-3 pb-5 gap-5 w-full">
