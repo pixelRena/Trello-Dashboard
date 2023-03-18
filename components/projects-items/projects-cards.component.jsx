@@ -2,7 +2,7 @@ import Button from "../buttons/button.component";
 import CardTemplate from "@/components/card-template/card-template.component";
 import ProjectsInfoCardTemplate from "@/components/card-template/projects-info-card-template.component";
 import Chart  from "chart.js/auto";
-import { Line } from 'react-chartjs-2';
+import { Line as ActivityData} from 'react-chartjs-2';
 import { options, weekLabels, lineChartBackgroundColor } from "@/utils/chart-settings/chart.options";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import Timeline from "../timeline-items/timeline.component";
@@ -64,7 +64,7 @@ export default function ProjectsCards() {
                         </div>
                         <div className="font-extralight">How much activity has taken place in this card.</div>
                         <div className="w-[99%] h-[100%]">
-                            <Line data={data} options={options}/>
+                            <ActivityData data={data} options={options}/>
                         </div>
                     </CardTemplate>
                 </div>
