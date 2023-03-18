@@ -5,7 +5,7 @@ export default function TestPageName() {
     return(
         <div className="lg:mt-0 mt-20 lg:p-0 p-5">
             <PageSubNavigation title="Analytics"/>
-            {/* <AnalyticsCard/> */}
+            <AnalyticsCard/>
         </div>
     )
 }

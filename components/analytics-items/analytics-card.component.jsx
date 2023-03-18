@@ -1,46 +1,46 @@
-// import CardTemplate from "@/components/card-template/card-template.component";
-// import ProgressBar from "@/components/progressbar/progressbar.component";
-// import Chart  from "chart.js/auto";
-// import { Line } from 'react-chartjs-2';
-// import { options, weekLabels, lineChartBackgroundColor } from "@/utils/chart-settings/chart.options";
-// import { AiOutlineArrowUp } from "react-icons/ai";
-// // To be removed
-// import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
-// import 'react-circular-progressbar/dist/styles.css';
-// import Button from "../buttons/button.component";
+import CardTemplate from "@/components/card-template/card-template.component";
+import ProgressBar from "@/components/progressbar/progressbar.component";
+import Chart  from "chart.js/auto";
+import { Line } from 'react-chartjs-2';
+import { options, weekLabels, lineChartBackgroundColor } from "@/utils/chart-settings/chart.options";
+import { AiOutlineArrowUp } from "react-icons/ai";
+// To be removed
+import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
+import 'react-circular-progressbar/dist/styles.css';
+import Button from "../buttons/button.component";
 
 export default function AnalyticsCard() {
-    // const cycleData = {
-    //     labels: weekLabels,
-    //     datasets: [
-    //     {
-    //         backgroundColor: lineChartBackgroundColor,
-    //         label: "Cycle Time (Days)",
-    //         data: [0, 3, 2, 6, 2, 2, 1],
-    //         fill: true,
-    //         borderColor: 'rgb(75, 192, 192)',
-    //         pointHoverRadius: 5,
-    //         pointRadius: 5,
-    //     }],
-    // }
+    const cycleData = {
+        labels: weekLabels,
+        datasets: [
+        {
+            backgroundColor: lineChartBackgroundColor,
+            label: "Cycle Time (Days)",
+            data: [0, 3, 2, 6, 2, 2, 1],
+            fill: true,
+            borderColor: 'rgb(75, 192, 192)',
+            pointHoverRadius: 5,
+            pointRadius: 5,
+        }],
+    }
 
-    // const leadData = {
-    //     labels: weekLabels,
-    //     datasets: [
-    //     {
-    //         backgroundColor: lineChartBackgroundColor,
-    //         label: "Lead Time (Days)",
-    //         data: [3, 1, 1, 1, 2, 3, 4],
-    //         fill: true,
-    //         borderColor: 'rgb(75, 192, 192)',
-    //         pointHoverRadius: 5,
-    //         pointRadius: 5,
-    //     }],
-    // }
+    const leadData = {
+        labels: weekLabels,
+        datasets: [
+        {
+            backgroundColor: lineChartBackgroundColor,
+            label: "Lead Time (Days)",
+            data: [3, 1, 1, 1, 2, 3, 4],
+            fill: true,
+            borderColor: 'rgb(75, 192, 192)',
+            pointHoverRadius: 5,
+            pointRadius: 5,
+        }],
+    }
 
     return(
         <div className="flex flex-col gap-2 lg:flex-row lg:gap-10 w-full">
-        {/* <div className=" flex flex-col lg:flex-col pt-3 pb-3 gap-5 w-full">
+        <div className=" flex flex-col lg:flex-col pt-3 pb-3 gap-5 w-full">
             <CardTemplate additionalClasses="text-2xl 2xl:text-lg" additionalContentClasses="flex flex-col" title="Board Activity">
                 <div>
                     <span className="font-bold text-green-400">+4</span> New Activity
@@ -78,10 +78,10 @@ export default function AnalyticsCard() {
                     <Line id="line-lead-time" data={leadData} options={options}/>
                 </div>
             </CardTemplate>
-        </div> */}
+        </div>
 
 
-        {/* <div className=" flex flex-col lg:flex-col pt-3 pb-5 gap-5 w-full">
+        <div className=" flex flex-col lg:flex-col pt-3 pb-5 gap-5 w-full">
             <CardTemplate title="Board Age" additionalContentClasses="flex flex-row justify-center gap-4">
                 <div className="w-[30%]">
                 <CircularProgressbar value={70} text={"33 days"}
@@ -151,7 +151,7 @@ export default function AnalyticsCard() {
                     <div className="font-extrabold text-8xl text-center ">2</div>
                 </CardTemplate>
             </div>
-        </div> */}
+        </div>
     </div>
     );
 }
