@@ -1,13 +1,13 @@
-import CardTemplate from "@/components/card-template/card-template.component";
-import ProgressBar from "@/components/progressbar/progressbar.component";
-import Chart  from "chart.js/auto";
-import { Line } from 'react-chartjs-2';
-import { options, weekLabels, lineChartBackgroundColor } from "@/utils/chart-settings/chart.options";
-import { AiOutlineArrowUp } from "react-icons/ai";
-// To be removed
-import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
-import 'react-circular-progressbar/dist/styles.css';
-import Button from "../buttons/button.component";
+// import CardTemplate from "@/components/card-template/card-template.component";
+// import ProgressBar from "@/components/progressbar/progressbar.component";
+// import Chart  from "chart.js/auto";
+// import { Line } from 'react-chartjs-2';
+// import { options, weekLabels, lineChartBackgroundColor } from "@/utils/chart-settings/chart.options";
+// import { AiOutlineArrowUp } from "react-icons/ai";
+// // To be removed
+// import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
+// import 'react-circular-progressbar/dist/styles.css';
+// import Button from "../buttons/button.component";
 
 export default function AnalyticsCard() {
     // const cycleData = {
