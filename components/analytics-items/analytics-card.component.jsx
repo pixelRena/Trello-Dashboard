@@ -1,7 +1,7 @@
 import CardTemplate from "@/components/card-template/card-template.component";
 import ProgressBar from "@/components/progressbar/progressbar.component";
 import Chart  from "chart.js/auto";
-import { Line } from 'react-chartjs-2';
+import { Line as TestLine } from 'react-chartjs-2';
 import { options, weekLabels, lineChartBackgroundColor } from "@/utils/chart-settings/chart.options";
 import { AiOutlineArrowUp } from "react-icons/ai";
 // To be removed
@@ -64,7 +64,7 @@ export default function AnalyticsCard() {
                 </div>
                 <div>Displays how the time it takes for cards to be completed from start of creation date to finish</div>
                 <div className="w-[99%] h-[100%]">
-                    <Line id="line-cycle-time" data={cycleData} options={options}/>
+                    <TestLine id="line-cycle-time" data={cycleData} options={options}/>
                 </div>
             </CardTemplate>
             <CardTemplate title="Lead Time" additionalClasses="flex flex-col h-full">
