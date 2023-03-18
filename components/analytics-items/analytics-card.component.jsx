@@ -81,7 +81,7 @@ export default function AnalyticsCard() {
         </div>
 
 
-        <div className=" flex flex-col lg:flex-col pt-3 pb-5 gap-5 w-full">
+        {/* <div className=" flex flex-col lg:flex-col pt-3 pb-5 gap-5 w-full">
             <CardTemplate title="Board Age" additionalContentClasses="flex flex-row justify-center gap-4">
                 <div className="w-[30%]">
                 <CircularProgressbar value={70} text={"33 days"}
@@ -151,7 +151,7 @@ export default function AnalyticsCard() {
                     <div className="font-extrabold text-8xl text-center ">2</div>
                 </CardTemplate>
             </div>
-        </div>
+        </div> */}
     </div>
     );
 }
