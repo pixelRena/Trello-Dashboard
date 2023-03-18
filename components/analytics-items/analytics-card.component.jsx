@@ -75,7 +75,7 @@ export default function AnalyticsCard() {
                 </div>
                 <div>Displays the time it takes for cards to be completed when it is first worked on (first action) to finish</div>
                 <div className="w-[99%] h-[100%]">
-                    <Line id="line-lead-time" data={leadData} options={options}/>
+                    {/* <Line id="line-lead-time" data={leadData} options={options}/> */}
                 </div>
             </CardTemplate>
         </div>
