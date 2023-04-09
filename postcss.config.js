@@ -1,6 +1,11 @@
+const flowbite = require('flowbite');
+
 module.exports = {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  purge: [
+    './node_modules/flowbite/dist/*.css'
+  ],
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
 };

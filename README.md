@@ -19,3 +19,6 @@
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
 <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
 </div>
+
+## Resources
+<a target="_blank" href="https://icons8.com/icon/21049/trello">Trello</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>

@@ -9,8 +9,12 @@ import { BoardContextProvider } from "@/context/board.context";
 import { UserContextProvider } from "@/context/user.context";
 import { NotificationsContextProvider } from "@/context/notifications.context";
 import { SidebarContextProvider } from "@/context/sidebar.context"; 
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+  const isLoginPage = router.pathname === '/login';
+
   return (
     <UserContextProvider>
       <NotificationsContextProvider>
@@ -24,11 +28,17 @@ export default function App({ Component, pageProps }) {
             </Head>  
             <Background/>
             <main className={styles.main} >
-              <section>
-                <Sidebar/>
-              </section>
-              <section className="lg:mt-5 lg:mr-5 lg:ml-72 h-full">
-                <Navigation/>
+              {
+                !isLoginPage && 
+                <section>
+                  <Sidebar/>
+                </section>
+              }
+              <section className={`${!isLoginPage && 'lg:mt-5 lg:mr-5 lg:ml-72'} h-full`}>
+                {
+                  !isLoginPage &&
+                  <Navigation/>
+                }
                 <Component {...pageProps} />
               </section>
             </main>
