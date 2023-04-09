@@ -8,14 +8,14 @@ export default function PrivacyPolicy() {
         <>
         <button className="text-blue-500 hover:underline" onClick={() => setOpen(true)}>Privacy Policy</button>
         <Modal
+            className="h-full bg-zinc-700/[.50]"
             show={open}
-            size="xs"
             onClose={() => setOpen(false)}
         >
             <Modal.Header className="bg-gray-700">
             Privacy Policy
             </Modal.Header>
-            <Modal.Body className="bg-gray-700">
+            <Modal.Body className="bg-gray-700 p-5">
             <div className="space-y-6">
                 <p className="text-base leading-relaxed text-gray-500 text-gray-400">
                 We respect your privacy and are committed to protecting your personal data.
