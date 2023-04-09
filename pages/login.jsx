@@ -1,5 +1,4 @@
 import PrivacyPolicy from "@/components/modals/privacy-policy.component";
-import { useState } from "react";
 
 export default function SignIn() {
 

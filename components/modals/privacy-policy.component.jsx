@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function PrivacyPolicy() {
     const [open, setOpen] = useState(false);
-    
+
     return(
         <>
         <button className="text-blue-500 hover:underline" onClick={() => setOpen(true)}>Privacy Policy</button>
@@ -12,10 +12,10 @@ export default function PrivacyPolicy() {
             size="xs"
             onClose={() => setOpen(false)}
         >
-            <Modal.Header>
+            <Modal.Header className="bg-gray-700">
             Privacy Policy
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body className="bg-gray-700">
             <div className="space-y-6">
                 <p className="text-base leading-relaxed text-gray-500 text-gray-400">
                 We respect your privacy and are committed to protecting your personal data.
