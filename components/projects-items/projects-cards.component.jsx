@@ -37,7 +37,7 @@ export default function ProjectsCards() {
     }
 
     return(
-        <div className="mt-24 flex flex-col-reverse gap-x-7 h-full w-full justify-around lg:flex-row lg:m-auto">
+        <div className="flex flex-col-reverse gap-x-7 h-full w-full justify-around lg:flex-row lg:m-auto">
                 <div className="flex flex-col py-3 gap-6 w-full">
                     <CardTemplate title="Checklist" additionalClasses="h-full">
                         <div className="absolute top-5 right-5 flex-row gap-4 lg:flex">
