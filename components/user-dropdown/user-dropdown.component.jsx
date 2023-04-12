@@ -13,7 +13,7 @@ export default function UserDropdown() {
             <button className={`relative ${isUserOpen ? "" : "bg-primary-color"} z-[16] rounded-2xl lg:px-2 lg:py-1 p-2 w-full`} type="button" onClick={() => setIsUserOpen(!isUserOpen)} 
             onBlur={() => setIsUserOpen(false)}>                
                 <div className="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-700 rounded-full mr-2">
-                    <span className="font-medium text-gray-600 dark:text-gray-300">AD</span>
+                    <span className="font-medium text-zinc-300">AD</span>
                 </div>
                 <div className="inline">
                     <span className="text-white">Alice Doe</span>
