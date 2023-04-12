@@ -1,4 +1,4 @@
-import { Modal} from "flowbite-react";
+import { Modal, Button } from "flowbite-react";
 import { useState } from "react";
 
 export default function PrivacyPolicy() {
@@ -8,22 +8,22 @@ export default function PrivacyPolicy() {
         <>
         <button className="text-blue-500 hover:underline" onClick={() => setOpen(true)}>Privacy Policy</button>
         <Modal
-            className="h-full bg-zinc-700/[.50]"
+            className="h-full"
             show={open}
             onClose={() => setOpen(false)}
         >
-            <Modal.Header className="bg-gray-700">
+            <Modal.Header>
             Privacy Policy
             </Modal.Header>
-            <Modal.Body className="bg-gray-700 p-5">
-            <div className="space-y-6">
-                <p className="text-base leading-relaxed text-gray-500 text-gray-400">
+            <Modal.Body className="p-5">
+            <div className="text-gray-700 space-y-6">
+                <p className="text-base leading-relaxed text-gray-800">
                 We respect your privacy and are committed to protecting your personal data.
                 </p>
-                <p className="text-base leading-relaxed text-gray-500 text-gray-400">
+                <p className="text-base leading-relaxed text-gray-800">
                 This Privacy Policy explains how we collect, use, and disclose your personal data in connection with your use of Trellometrics. By accessing or using Trellometrics, you agree to the terms of this Privacy Policy.
                 </p>
-                <ol className=" px-5 list-decimal">
+                <ol className="px-5 list-decimal">
                     <li>Collection of Information
                         <p className="font-light">
                         We may collect personal data that you provide to us when you use the Trellometrics, such as your name, email address, and Trello credentials. We may also collect information about your use of Trellometrics, including your Trello board and card activity and analytics data.</p>
@@ -53,7 +53,8 @@ export default function PrivacyPolicy() {
                         We may modify this Privacy Policy at any time. If we make material changes to this Privacy Policy, we will notify you by email or by posting a notice on Trellometrics. Your continued use of Trellometrics after any changes to this Privacy Policy will signify your acceptance of such changes.
                         </p>
                     </li>
-                </ol>
+                </ol>  
+                <Button onClick={() => setOpen(false)}>Close</Button>
             </div>
             </Modal.Body>
         </Modal>
