@@ -23,22 +23,22 @@ export default function Sidebar() {
         <div className="flex flex-col lg:justify-between text-2xl lg:text-base justify-start flex-1 mt-6 m-auto">
             <nav>
                 <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md mb-3" href="/dashboard" onClick={() => setIsSidebarOpen(false)}>
-                    <SlOptionsVertical color={router.pathname === "/dashboard" && "#2C3EDC"} size={22}/>
+                    <SlOptionsVertical color={router.pathname === "/dashboard" ? "#2C3EDC": "#fff"} size={22}/>
                     <span className="mx-4">Dashboard</span>
                 </Link>
 
                 <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md  mb-3" href="/projects" onClick={() => setIsSidebarOpen(false)}>
-                    <HiOutlineDocument color={router.pathname === "/projects" && "#2C3EDC"} size={22}/>
+                    <HiOutlineDocument color={router.pathname === "/projects" ? "#2C3EDC" : "#fff"} size={22}/>
                     <span className="mx-4">Projects</span>
                 </Link>
 
                 <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md  mb-3" href="/statistics" onClick={() => setIsSidebarOpen(false)}>
-                    <HiOutlineShare color={router.pathname === "/statistics" && "#2C3EDC"} size={22}/>
+                    <HiOutlineShare color={router.pathname === "/statistics" ? "#2C3EDC": "#fff"} size={22}/>
                     <span className="mx-4">Analytics</span>
                 </Link>
 
                 <Link className="flex items-center px-4 py-2 hover:bg-white/25 transition ease-in-out duration-300 rounded-md  mb-3" href="/collaboration" onClick={() => setIsSidebarOpen(false)}>
-                    <HiOutlineUserGroup color={router.pathname === "/collaboration" && "#2C3EDC"} size={22}/>
+                    <HiOutlineUserGroup color={router.pathname === "/collaboration" ? "#2C3EDC": "#fff"} size={22}/>
                     <span className="mx-4">Collaboration</span>
                 </Link>
             </nav>
