@@ -2,8 +2,6 @@ import { useContext } from "react";
 import { UserContext } from "@/context/user.context";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosLogOut } from "react-icons/io";
-import PlaceholderAvatar from '../../test/placeholder_avatar.jpg';
-import {Avatar} from "flowbite-react";
 
 export default function UserDropdown() {
     const { isUserOpen, setIsUserOpen } = useContext(UserContext);
