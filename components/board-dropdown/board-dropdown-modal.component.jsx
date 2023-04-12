@@ -7,7 +7,7 @@ export default function BoardDropdownModal() {
 
     return(
         <Modal
-            className="w-full top-1/2 -translate-y-1/2 !bg-transparent lg:hidden"
+            className="w-full h-full top-[15%] !bg-transparent lg:hidden"
             show={isModalOpen}
             onClose={() => setIsModalOpen(!isModalOpen)}
         >
