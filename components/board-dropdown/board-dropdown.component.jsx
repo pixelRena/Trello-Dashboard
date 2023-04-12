@@ -5,6 +5,7 @@ import { BiChevronDown } from "react-icons/bi";
 import BoardItems from "../board-dropdown-items/board-items.component";
 import ListItems from "../board-dropdown-items/list-items.component";
 import CardItems from "../board-dropdown-items/card-items.component";
+import BoardDropdownModal from "./board-dropdown-modal.component";
 
 export default function BoardDropdown() {
     const router = useRouter();
@@ -27,6 +28,7 @@ export default function BoardDropdown() {
                         <BoardItems/>
                     </div>
                 </div>
+                <BoardDropdownModal/>
                 { router.pathname === "/projects" && (
                     <>
                     <div className={`${isListOpen && "rounded-2xl bg-primary-color backdrop-blur-2xl"}`}>
